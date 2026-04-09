@@ -1,0 +1,69 @@
+{
+  "device": {
+    "part": "xczu9eg-ffvb1156-2-e",
+    "LUT": 274080,
+    "FF": 548160,
+    "DSP": 2520,
+    "BRAM36": 912
+  },
+  "model": {
+    "n_params": 9697,
+    "layer_params": {
+      "Conv1D(14->32, k=3)": 1376,
+      "Conv1D(32->64, k=3)": 6208,
+      "Linear(64->32)": 2080,
+      "Linear(32->1)": 33
+    }
+  },
+  "methodology": "LUT = n_params*bits/6 | DSP = n_params*bits/18 | Latency = bits/2 us at 500 MHz | Comm = n_params*bits/8/1024 KiB",
+  "configs": {
+    "FP32": {
+      "bits": 32,
+      "precision": "ap_fixed<32,16>",
+      "lut": 51717,
+      "pct_lut": 18.9,
+      "dsp": 17239,
+      "pct_dsp": 684.1,
+      "latency_us": 16,
+      "comm_kib": 37.88,
+      "fits": false,
+      "spare_dsps": 0
+    },
+    "INT8": {
+      "bits": 8,
+      "precision": "ap_fixed<8,4>",
+      "lut": 12929,
+      "pct_lut": 4.7,
+      "dsp": 4309,
+      "pct_dsp": 171.0,
+      "latency_us": 4,
+      "comm_kib": 9.47,
+      "fits": false,
+      "spare_dsps": 0
+    },
+    "INT4": {
+      "bits": 4,
+      "precision": "ap_fixed<4,2>",
+      "lut": 6464,
+      "pct_lut": 2.4,
+      "dsp": 2154,
+      "pct_dsp": 85.5,
+      "latency_us": 2,
+      "comm_kib": 4.73,
+      "fits": true,
+      "spare_dsps": 366
+    },
+    "INT2": {
+      "bits": 2,
+      "precision": "ap_fixed<2,1>",
+      "lut": 3232,
+      "pct_lut": 1.2,
+      "dsp": 1077,
+      "pct_dsp": 42.7,
+      "latency_us": 1,
+      "comm_kib": 2.37,
+      "fits": true,
+      "spare_dsps": 1443
+    }
+  }
+}

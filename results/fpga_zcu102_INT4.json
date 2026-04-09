@@ -1,0 +1,13 @@
+{
+  "bits": 4,
+  "precision": "ap_fixed<4,2>",
+  "lut": 6464,
+  "pct_lut": 2.4,
+  "dsp": 2154,
+  "pct_dsp": 85.5,
+  "latency_us": 2,
+  "comm_kib": 4.73,
+  "fits": true,
+  "spare_dsps": 366,
+  "part": "xczu9eg-ffvb1156-2-e"
+}
